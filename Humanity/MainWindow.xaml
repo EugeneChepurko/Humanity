@@ -1,0 +1,54 @@
+﻿<Window x:Class="Humanity.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Humanity"
+        mc:Ignorable="d"
+        Title="KingOfHumans" Height="400" Width="500" Closing="Window_Closing">
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Name="myGrid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="70"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <Label Grid.Column="0" Grid.Row="0" Content="Id:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="1" Content="Name:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="2" Content="Surname:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="3" Content="Age:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="4" Content="HP:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="5" Content="Mana:" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label Grid.Column="0" Grid.Row="6" Content="Strength :" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        
+        <TextBox Grid.Column="1" Name="textBoxId" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxName" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxSName" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxAge" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxHP" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxMana" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+        <TextBox Grid.Column="1" Name="textBoxStr" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top" Width="145" Margin="5,5,0,0"/>
+
+        <Button Content="Add" Name="Add" Margin="0,36,0,-33" HorizontalAlignment="Left" Grid.Row="6" Click="Add_Click" Width="59" Height="27"/>
+        <Button Content="Del" Name="del" Margin="64,36,0,-33" HorizontalAlignment="Left" Grid.Row="6" Click="Del_Click" Width="59" Grid.ColumnSpan="2" Height="27"/>
+        <Button Content="Update" Name="update" Margin="166,38,-59,-31" Grid.Row="6" Click="Update_Click" HorizontalAlignment="Left" Grid.Column="1" Width="59" Height="27"/>
+        <Button Content="Edit" Name="edit" Margin="58,38,0,-31" Grid.Row="6" Click="Edit_Click" HorizontalAlignment="Left" Grid.Column="1" Width="59" Height="27"/>
+
+        <Label Grid.Column="1" Margin="161,-5,-76,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="25" FontSize="11">List of humans</Label>
+        <ListBox Name="listbox" Grid.Column="1" HorizontalAlignment="Left" Height="162" Grid.RowSpan="7" VerticalAlignment="Top" Width="110" Margin="166,20,-110,0" SelectionChanged="Listbox_SelectionChanged"></ListBox>
+        <!--<DataGrid Name="dataGrid" AutoGenerateColumns="True" Grid.Column="1" HorizontalAlignment="Left" Height="212" Margin="288,0,-459,-23" Grid.RowSpan="7" VerticalAlignment="Top" Width="310" Grid.Row="1" SelectionChanged="DataGrid_SelectionChanged">
+
+        </DataGrid>-->
+
+
+    </Grid>
+</Window>
