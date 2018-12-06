@@ -163,7 +163,6 @@ namespace Humanity
             foreach (Human human in humans)
             {
                 MessageBox.Show(human.ToString());
-
             }
         }
 
