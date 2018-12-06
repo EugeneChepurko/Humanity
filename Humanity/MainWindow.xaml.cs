@@ -55,7 +55,7 @@ namespace Humanity
         }
         private async void ReadBase()
         {
-            await Task.Delay(100);
+            await Task.Delay(30);
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 SqlDataReader dataReader = null;
@@ -180,7 +180,7 @@ namespace Humanity
 
         private async void Edit_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(100);
+            await Task.Delay(30);
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("UPDATE myHumanity SET name = @name, surname = @surname, age = @age, hp = @hp, mp = @mp, strength = @strength WHERE id = @id", sqlConnection);
@@ -212,7 +212,7 @@ namespace Humanity
         }
         private async void Del_Click(object sender, RoutedEventArgs e)
         {
-            await Task.Delay(50);
+            await Task.Delay(30);
             using (sqlConnection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand("DELETE FROM myHumanity WHERE id = @id", sqlConnection);
