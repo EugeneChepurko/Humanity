@@ -4,6 +4,7 @@ namespace Humanity.Templates
 {
     class Human
     {
+        public bool Male { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
         public uint Age { get; set; }
